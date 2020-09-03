@@ -9,6 +9,7 @@ public class Pvpmain extends JavaPlugin
 	public void onEnable()
 	{
 		getLogger().info(Color.RED + "PvP has been enabled!");
+		getLogger().info("Suck my dick");
 	}
 	
 	@Override
