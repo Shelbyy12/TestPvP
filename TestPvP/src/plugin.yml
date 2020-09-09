@@ -2,3 +2,5 @@ name: Pvp
 main: PvP.Pvpmain
 version: 0.1
 description: Pvp plugin
+commands:
+  pvp:

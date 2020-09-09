@@ -7,6 +7,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
+import PvP.soup;
+
 public class pvp 
   implements CommandExecutor 
 {
@@ -15,6 +17,7 @@ public class pvp
 		if(sender instanceof Player)
 		{
 			Player player = (Player) sender;
+			player.getInventory().clear();
 			
 			ItemStack sword = new ItemStack(Material.DIAMOND_SWORD);
 			ItemStack head = new ItemStack(Material.IRON_HELMET);
@@ -27,6 +30,7 @@ public class pvp
 			player.getInventory().setChestplate(chest);
 			player.getInventory().setLeggings(legs);
 			player.getInventory().setBoots(boot);	
+			soup.giveSoup(player, 35);
 		}
 		return true;
 	}
