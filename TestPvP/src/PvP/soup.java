@@ -28,7 +28,7 @@ public class soup implements Listener
 					ItemStack bowl = new ItemStack(Material.BOWL);
 					player.setItemInHand(bowl);
 					double health = player.getHealth();
-					player.setHealth(Math.min(health + 7, 20));				
+					player.setHealth(Math.min(health + 7, 20));			
 				}
 			}
 		}
