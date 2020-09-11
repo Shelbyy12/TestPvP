@@ -8,6 +8,9 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
+import net.md_5.bungee.api.ChatColor;
 
 public class soup implements Listener
 {
@@ -44,6 +47,10 @@ public class soup implements Listener
 		for(int i = 0; i < soup; i++)
 		{
 			ItemStack soups = new ItemStack(Material.MUSHROOM_SOUP);
+			ItemMeta soupsm = soups.getItemMeta();
+			String soupname = ChatColor.RED + "Soup";
+			soupsm.setDisplayName(soupname);
+			soups.setItemMeta(soupsm);
 			player.getInventory().addItem(soups);
 		}
 	}
